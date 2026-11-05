@@ -1,0 +1,35 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
+@media (max-width: 1024px) { html { scroll-padding-top: 5rem; } }
+
+body {
+  margin: 0;
+  max-width: 100%;
+  font: 400 .9375rem/1.7 var(--sans);
+  color: var(--ink);
+  background: var(--white);
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+em { font-style: normal; color: var(--pink); }
+
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 400; line-height: 1.3; }
+h2 { font-size: clamp(1.5rem, 2.4vw, 2.125rem); }
+
+:focus-visible { outline: 3px solid var(--azure); outline-offset: 3px; border-radius: 4px; }
+
+section { position: relative; overflow: hidden; }
+
+.wrap { position: relative; z-index: 1; width: var(--wrap); margin-inline: auto; }
+.narrow { max-width: 900px; }
+
+.skip { position: absolute; top: -4rem; left: 0; z-index: 100; padding: .5rem 1rem; color: #fff; background: var(--ink); }
+.skip:focus { top: 0; }

@@ -1,0 +1,37 @@
+.faq { padding: 3rem 0 5rem; background: #fff; }
+.faq .wrap { text-align: center; }
+.faq h2 { margin-bottom: 2.2rem; font-size: clamp(1.4rem, 2vw, 1.75rem); text-align: left; }
+.faq-list { display: grid; gap: 1.1rem; margin-bottom: 3.5rem; }
+
+.faq-item { background: var(--bg); border-radius: 14px; transition: box-shadow .25s; }
+.faq-item:hover, .faq-item.open { box-shadow: 0 6px 18px -10px rgba(0, 0, 0, .25); }
+
+.faq-q { all: unset; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; gap: 1rem; width: 100%; padding: .9rem 1.1rem; font-size: .75rem; font-weight: 500; text-align: left; border-radius: 14px; cursor: pointer; }
+.faq-q:focus-visible { outline: 3px solid var(--azure); outline-offset: 2px; }
+.faq-q svg { flex: none; width: 18px; height: 18px; fill: none; stroke: var(--pink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s; }
+.faq-item.open .faq-q svg { transform: rotate(180deg); }
+
+.faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
+.faq-a > div { overflow: hidden; }
+.faq-a p { margin: 0; padding: 0 1.1rem 1.1rem; font-size: .75rem; color: #555; text-align: left; }
+
+.r-faq-r { --s: 180px; --b: 20px; --c: #f6f6f6; top: 30px; right: 6%; }
+.r-faq-l { --s: 270px; --b: 20px; --c: #f6f6f6; top: 420px; left: -140px; }
+.r-faq-s { --s: 80px; --b: 20px; --c: #f6f6f6; right: 9%; bottom: 20%; }
+
+@media (max-width: 1024px) {
+  .faq { padding: 3.5rem 0 4rem; }
+  .faq .wrap { width: 56%; min-width: 18rem; max-width: none; }
+  .faq h2 { margin-bottom: 2rem; font-size: 1.4rem; }
+  .faq-list { margin-bottom: 2.5rem; }
+  .faq .btn { display: table; margin-inline: auto; }
+
+  .r-faq-r { --s: 190px; top: 2rem; right: -60px; }
+  .r-faq-l, .r-faq-s { display: none; }
+}
+
+@media (max-width: 560px) {
+  .faq .wrap { width: 84%; min-width: 0; }
+  .faq h2 { font-size: 1.3rem; }
+}

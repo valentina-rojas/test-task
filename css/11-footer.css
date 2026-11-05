@@ -1,0 +1,48 @@
+.footer { position: relative; padding: 3.2rem 0 1.8rem; overflow: hidden; background: var(--bg); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) auto auto; justify-content: space-between; gap: 2rem 4rem; font-size: .75rem; }
+
+.foot-about p { max-width: 19rem; margin: 1rem 0; }
+.foot-about b { font-weight: 600; }
+.foot-about a { text-decoration: none; }
+.foot-about a:hover { text-decoration: underline; }
+.foot-about .line { display: flex; align-items: center; gap: .6rem; }
+.foot-about .line svg { flex: none; width: 16px; height: 16px; fill: var(--pink); }
+
+.foot-col h3 { margin-bottom: 1.6rem; font-size: 1.1rem; }
+.foot-col ul { display: grid; gap: .9rem; margin: 0; padding: 0; list-style: none; }
+.foot-col a {
+  padding-bottom: 2px;
+  text-decoration: none;
+  background: linear-gradient(var(--azure), var(--azure)) 0 100% / 0 2px no-repeat;
+  transition: background-size .25s;
+}
+.foot-col a:hover, .foot-col a:focus-visible { background-size: 100% 2px; }
+
+.social { display: flex; align-items: center; grid-column: 1; gap: .8rem; }
+.social a { display: grid; place-items: center; width: 20px; height: 20px; background: var(--pink); border-radius: 50%; transition: transform .2s, background .2s; }
+.social a:hover { background: var(--pink-dark); transform: translateY(-3px); }
+.social svg { width: 14px; height: 14px; }
+
+.copy { grid-column: 2 / 4; margin: 0; text-align: right; }
+
+.r-foot-l { --s: 150px; --b: 20px; top: 120px; left: 40px; }
+.r-foot-r { --s: 260px; --b: 24px; top: 60px; right: -70px; }
+
+@media (max-width: 1024px) {
+  .footer { padding: 3rem 0 2.2rem; }
+  .foot-grid { grid-template-columns: max-content max-content; justify-content: start; gap: 2.2rem 2.5rem; }
+  .foot-about { grid-column: 1 / -1; }
+  .foot-about p { max-width: 17rem; }
+  .copy { grid-column: 2; text-align: left; white-space: nowrap; }
+
+  .r-foot-l { --s: 100px; --b: 14px; top: 7rem; left: 11%; }
+  .r-foot-r { --s: 200px; --b: 18px; right: 5%; bottom: 1.2rem; top: auto; }
+}
+
+@media (max-width: 560px) {
+  .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .copy { grid-column: 1; max-width: 12rem; white-space: normal; }
+
+  .r-foot-l { display: none; }
+  .r-foot-r { --s: 130px; --b: 16px; top: 20rem; right: -50px; bottom: auto; }
+}

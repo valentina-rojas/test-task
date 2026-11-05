@@ -1,0 +1,64 @@
+/* Button */
+.btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: .7rem 1.1rem;
+  font-size: .8125rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: var(--pink);
+  border-radius: 2px;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+.btn::before { /* shine sweep */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .45), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+.btn:hover { background: var(--pink-dark); transform: translateY(-2px); box-shadow: 0 8px 18px -8px rgba(200, 89, 179, .8); }
+.btn:hover::before { animation: shine .7s; }
+.btn:active { transform: none; }
+
+.btn-y { background: var(--yellow); box-shadow: 0 4px 10px rgba(0, 0, 0, .12); }
+.btn-y:hover { background: #f0cb00; box-shadow: 0 8px 18px -8px rgba(0, 0, 0, .4); }
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  transition: translate .25s ease, box-shadow .25s ease;
+}
+.card:hover { translate: 0 -6px; box-shadow: 0 16px 28px -14px rgba(0, 0, 0, .3); }
+
+/* Decorative ring */
+.ring {
+  position: absolute;
+  z-index: 0;
+  width: var(--s);
+  height: var(--s);
+  border: var(--b, 16px) solid var(--c, #fff);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Scroll progress bar */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink), var(--azure));
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}

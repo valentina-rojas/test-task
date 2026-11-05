@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#dc6fc7" />
+    <title>A Better Weigh</title>
+    <meta
+      name="description"
+      content="Book your free medical check-up and weight loss consultation in Chicago. No credit card or insurance required."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/01-tokens.css" />
+    <link rel="stylesheet" href="css/02-base.css" />
+    <link rel="stylesheet" href="css/03-components.css" />
+    <link rel="stylesheet" href="css/04-header.css" />
+    <link rel="stylesheet" href="css/05-hero.css" />
+    <link rel="stylesheet" href="css/06-stats.css" />
+    <link rel="stylesheet" href="css/07-who.css" />
+    <link rel="stylesheet" href="css/08-help.css" />
+    <link rel="stylesheet" href="css/09-get.css" />
+    <link rel="stylesheet" href="css/10-faq.css" />
+    <link rel="stylesheet" href="css/11-footer.css" />
+    <link rel="stylesheet" href="css/12-motion.css" />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="header" id="top">
+      <div class="wrap header-in">
+        <a class="logo" href="#top" aria-label="A Better Weigh, Inc – home">
+          <img
+            class="logo-img"
+            src="img/logo.webp"
+            width="400"
+            height="181"
+            alt=""
+          />
+        </a>
+
+        <button
+          class="burger"
+          id="burger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <span class="nav-title" aria-hidden="true">Menu</span>
+          <ul>
+            <li style="--i: 0"><a href="#about">About Us</a></li>
+            <li style="--i: 1"><a href="#book">Book Online</a></li>
+            <li class="has-sub" style="--i: 2">
+              <a href="#programs">Weight Loss Programs</a>
+              <button
+                class="sub-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="sub-programs"
+                aria-label="Show Weight Loss Programs submenu"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              <div class="sub" id="sub-programs">
+                <ul>
+                  <li><a href="#program-start">Getting Started</a></li>
+                  <li><a href="#program-medication">Medication Program</a></li>
+                  <li>
+                    <a href="#program-nutrition">Nutrition &amp; Support</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li style="--i: 3"><a href="#stories">Real Patient Stories</a></li>
+            <li style="--i: 4"><a href="#locations">Locations</a></li>
+            <li style="--i: 5"><a href="#blog">Blog</a></li>
+            <li style="--i: 6"><a href="#shop">Shop</a></li>
+            <li style="--i: 7"><a href="#subscription">Subscription</a></li>
+          </ul>
+          <div class="nav-extra">
+            <a class="btn" href="#book">Book my appointment</a>
+            <a class="nav-phone" href="tel:7734964222">773-496-4222</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-yellow" aria-hidden="true"></div>
+        <span class="ring r-hero-l" aria-hidden="true"></span>
+        <span class="ring r-hero-r" aria-hidden="true"></span>
+
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <h1 data-reveal>
+              Chicago’s <em>Free</em> Medical Check-Up and Weight Loss
+              Consultation
+            </h1>
+            <p class="spots" data-reveal style="--d: 0.1s">
+              Only <em>11</em> spots available!
+            </p>
+            <p class="desc" data-reveal style="--d: 0.2s">
+              Limited spots available due to the Physicians schedule and the
+              high demand for service. No credit card or insurance required.
+            </p>
+            <a class="btn" href="#book" data-reveal style="--d: 0.3s"
+              >Book my appointment</a
+            >
+          </div>
+
+          <div class="hero-card-wrap" data-reveal="zoom" style="--d: 0.25s">
+            <!--  deadline  (ISO date + UTC offset) -->
+            <div
+              class="countdown"
+              data-deadline="2026-11-15T23:59:59-06:00"
+              role="timer"
+              aria-label="Time left for this offer"
+            >
+              <p>Your offer ends in:</p>
+              <div class="cd-grid">
+                <div>
+                  <span class="cd-label">Days</span
+                  ><span class="cd-num" id="cd-d">00</span>
+                </div>
+                <div>
+                  <span class="cd-label">Hours</span
+                  ><span class="cd-num" id="cd-h">00</span>
+                </div>
+                <div>
+                  <span class="cd-label">Minutes</span
+                  ><span class="cd-num" id="cd-m">00</span>
+                </div>
+                <div>
+                  <span class="cd-label">Seconds</span
+                  ><span class="cd-num" id="cd-s">00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats" id="about">
+        <span class="ring r-stats-l" aria-hidden="true"></span>
+        <span class="ring r-stats-r" aria-hidden="true"></span>
+
+        <div class="wrap">
+          <ul class="stat-grid">
+            <li class="card stat" data-reveal>
+              <svg viewBox="0 0 32 32" stroke="#6cb9f0" aria-hidden="true">
+                <rect x="3" y="9" width="26" height="19" rx="3" />
+                <path d="M11 9V5h10v4M11 9v19M21 9v19" />
+              </svg>
+              <b><span data-count="10">10</span><i>+</i></b>
+              <span>years in business</span>
+            </li>
+            <li class="card stat" data-reveal style="--d: 0.12s">
+              <svg viewBox="0 0 32 32" stroke="#ffc400" aria-hidden="true">
+                <circle cx="16" cy="16" r="13" />
+                <circle
+                  cx="11.5"
+                  cy="13"
+                  r="1.4"
+                  fill="#ffc400"
+                  stroke="none"
+                />
+                <circle
+                  cx="20.5"
+                  cy="13"
+                  r="1.4"
+                  fill="#ffc400"
+                  stroke="none"
+                />
+                <path d="M9.5 18.5c3.5 4 9.5 4 13 0" />
+              </svg>
+              <b><span data-count="2000">2000</span><i>+</i></b>
+              <span>positive reviews</span>
+            </li>
+            <li class="card stat" data-reveal style="--d: 0.24s">
+              <svg viewBox="0 0 32 32" stroke="#dc6fc7" aria-hidden="true">
+                <path
+                  d="M16 4C9 4 4 8.5 4 14c0 3 1.5 5.5 4 7.2L6 28l6.5-3.5c1.1.3 2.3.5 3.5.5 7 0 12-4.5 12-10S23 4 16 4z"
+                />
+              </svg>
+              <b
+                ><span data-count="15000" data-fmt="dot">15.000</span
+                ><i>+</i></b
+              >
+              <span>satisfied clients</span>
+            </li>
+            <li class="card stat" data-reveal style="--d: 0.36s">
+              <svg viewBox="0 0 32 32" stroke="#5aa512" aria-hidden="true">
+                <path d="M2 17h7l3-10 5 19 4-13 2 4h7" />
+              </svg>
+              <b>Many<i>+</i></b>
+              <span>nurses and physician assistants on staff</span>
+            </li>
+          </ul>
+          <a class="btn btn-y" href="#book" data-reveal>Book my appointment</a>
+        </div>
+      </section>
+
+      <!-- Who / How -->
+      <section class="who">
+        <span class="ring r-who-l" aria-hidden="true"></span>
+        <span class="ring r-who-r" aria-hidden="true"></span>
+
+        <div class="wrap who-grid">
+          <div class="who-text" data-reveal="left">
+            <h2>Who Is The Consultation For?</h2>
+            <p>
+              Chicago’s free medical check-up and weight loss consultation is
+              for Chicago residents who are looking to lose weight so they can
+              live a long, vibrant and healthy life, while looking good and not
+              breaking the bank.
+            </p>
+            <h2>How Does It Work?</h2>
+            <p>
+              In this exam a certified nurse or physician will do various tests
+              to check your overall health level and find which easy-to-do
+              physician-supervised weight loss program will work best for you.
+            </p>
+            <a class="btn" href="#book">Book my appointment</a>
+          </div>
+
+          <div class="who-img" data-reveal="zoom" style="--d: 0.15s">
+            <span class="disc" aria-hidden="true"></span>
+            <div class="circle">
+              <img
+                src="img/woman.webp"
+                width="458"
+                height="566"
+                alt="Smiling woman in headphones flexing her arm"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Help: desktop shows the group photo, tablet/mobile the team photo between the texts -->
+      <section class="help">
+        <span class="ring r-help" aria-hidden="true"></span>
+
+        <div class="wrap narrow help-body">
+          <div class="col help-intro" data-reveal>
+            <h2>We Can Help You</h2>
+            <p>
+              For those of us who struggle with our weight it’s easy to lose
+              hope. We have seen so many tricks, gimmicks and weight loss
+              programs that simply do not work for us. They want us to eat like
+              a pigeon, avoid all the things we love to eat and work out till we
+              cry.
+            </p>
+            <p>
+              We are here to tell you that it doesn’t have to be that way. There
+              is hope! Technology has advanced rapidly in recent years and now,
+              with proper guidance…
+            </p>
+          </div>
+
+          <img
+            class="team"
+            data-reveal="zoom"
+            src="img/team.jpg"
+            width="1400"
+            height="934"
+            alt="The A Better Weigh team of physicians and nurses"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <div class="col" data-reveal>
+            <p>
+              You can join the ranks of our over 15,000 satisfied clients who
+              have lost weight, regained their confidence and are living happy
+              exuberant lives with their family. They did this without: breaking
+              the bank, sweating buckets in intense workout programs, and most
+              importantly, without giving up ice-cream, bread, pizza, doughnuts
+              and all their favorite foods.
+            </p>
+            <a class="btn btn-desktop" href="#book">Book my appointment</a>
+            <a class="btn btn-tablet" href="#stories">See patient stories</a>
+          </div>
+        </div>
+
+        <img
+          class="group"
+          data-reveal="zoom"
+          style="--d: 0.1s"
+          src="img/group.webp"
+          width="1400"
+          height="468"
+          alt="Six smiling clients standing arm in arm"
+          loading="lazy"
+          decoding="async"
+        />
+      </section>
+
+      <!-- What you'll get -->
+      <section class="get">
+        <span class="ring r-get-l" aria-hidden="true"></span>
+        <span class="ring r-get-r" aria-hidden="true"></span>
+        <span class="ring r-get-s" aria-hidden="true"></span>
+
+        <div class="wrap">
+          <h2 data-reveal>
+            What You’ll Get At Your <em>Free</em> Consultation
+          </h2>
+
+          <div class="get-grid">
+            <article class="card get-card blue" data-reveal>
+              <h3>Body Mass Index</h3>
+              <ul>
+                <li>Complete understanding of your body composition</li>
+                <li>A clear view of your weight loss goals</li>
+                <li>
+                  Clear data to help you make an informed decision about your
+                  health
+                </li>
+              </ul>
+            </article>
+            <article class="card get-card pink" data-reveal style="--d: 0.12s">
+              <h3>Vital Signs Check</h3>
+              <ul>
+                <li>Body temperature</li>
+                <li>Pulse rate, heart's rate, rhythm and regularity</li>
+                <li>Breathing rate</li>
+                <li>Blood pressure</li>
+              </ul>
+            </article>
+          </div>
+
+          <a class="btn" href="#book" data-reveal>Book my appointment</a>
+        </div>
+      </section>
+
+      <!-- FAQ (items are built by js/faq.js) -->
+      <section class="faq" id="book">
+        <span class="ring r-faq-r" aria-hidden="true"></span>
+        <span class="ring r-faq-l" aria-hidden="true"></span>
+        <span class="ring r-faq-s" aria-hidden="true"></span>
+
+        <div class="wrap narrow">
+          <h2 data-reveal>Frequently Asked Questions</h2>
+          <div class="faq-list" id="faq-list"></div>
+          <a class="btn" href="#book" data-reveal>Book my appointment</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span class="ring r-foot-l" aria-hidden="true"></span>
+      <span class="ring r-foot-r" aria-hidden="true"></span>
+
+      <div class="wrap foot-grid">
+        <div class="foot-about" data-reveal>
+          <img
+            class="logo-img"
+            src="img/logo.webp"
+            width="400"
+            height="181"
+            alt="A Better Weigh, Inc – Medical Weight Loss Center"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>
+            A Better Weigh Medical Weight Loss Center offers a weight loss
+            program dedicated to helping you achieve long term weight loss
+            success with the use of FDA approved medication.
+          </p>
+          <p class="line">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"
+              />
+            </svg>
+            <span
+              ><b>Head Office:</b> 1931 W 95th Streeet Chicago IL, 60643</span
+            >
+          </p>
+          <p class="line">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1z"
+              />
+            </svg>
+            <span><b>Phone:</b> <a href="tel:7734964222">773-496-4222</a></span>
+          </p>
+        </div>
+
+        <nav class="foot-col" aria-label="About" data-reveal style="--d: 0.1s">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#book">Book Online</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#stories">Real Patient Stories</a></li>
+            <li><a href="#programs">Weight Loss Programs</a></li>
+          </ul>
+        </nav>
+
+        <nav
+          class="foot-col"
+          aria-label="More links"
+          data-reveal
+          style="--d: 0.2s"
+        >
+          <h3>More Links</h3>
+          <ul>
+            <li><a href="#">Franchise Opportunities</a></li>
+            <li><a href="#">Career Opportunities</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="social" data-reveal style="--d: 0.15s">
+          <a href="#" aria-label="Instagram"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="5"
+                y="5"
+                width="14"
+                height="14"
+                rx="4"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3.2"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+              /></svg
+          ></a>
+          <a href="#" aria-label="Twitter"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#fff"
+                d="M19 7.5c-.5.25-1 .4-1.6.5.6-.4 1-.9 1.2-1.5-.5.3-1.1.5-1.8.7a2.8 2.8 0 0 0-4.8 2.5A8 8 0 0 1 6 6.7a2.8 2.8 0 0 0 .9 3.7c-.5 0-.9-.1-1.3-.4 0 1.4 1 2.5 2.2 2.8-.4.1-.8.1-1.2 0 .3 1.1 1.4 1.9 2.6 1.9A5.6 5.6 0 0 1 5 16a8 8 0 0 0 12.3-7.2c.7-.4 1.2-.9 1.7-1.3z"
+              /></svg
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="#fff"
+                d="M13.5 20v-6.5H16l.4-2.7h-2.9V9.2c0-.8.3-1.3 1.4-1.3h1.6V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.7v1.7H8v2.7h2.6V20z"
+              /></svg
+          ></a>
+        </div>
+
+        <p class="copy" data-reveal style="--d: 0.25s">
+          Copyright by A Better Weigh Inc. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/submenu.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/parallax.js"></script>
+  </body>
+</html>

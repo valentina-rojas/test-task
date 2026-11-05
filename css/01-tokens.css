@@ -1,0 +1,19 @@
+:root {
+  --pink: #dc6fc7;
+  --pink-dark: #c859b3;
+  --yellow: #ffd900;
+  --blue: #72c2f5;
+  --azure: #0b8be0;
+  --ink: #333;
+  --bg: #f9f9f9;
+  --white: #fff;
+
+  --serif: "Libre Baskerville", Georgia, serif;
+  --sans: "Montserrat", system-ui, sans-serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  --wrap: min(100% - 2.5rem, max(60%, 760px), 1200px);
+}
+
+@media (max-width: 1024px) { :root { --wrap: min(84%, 100% - 2.5rem); } }
+@media (max-width: 560px)  { :root { --wrap: calc(100% - 2.5rem); } }

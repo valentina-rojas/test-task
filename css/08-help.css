@@ -1,0 +1,34 @@
+/* Help — Desktop: one text block + group photo. Tablet/mobile: text, team photo, text. */
+
+.help { padding: 4rem 0 0; text-align: center; }
+.help h2 { margin-bottom: 1.5rem; }
+.help p { margin: 0 0 1.5rem; font-size: .8125rem; }
+.help-intro { margin-bottom: 1.5rem; font-size: .8125rem; } 
+.help-intro p { display: inline; } 
+.help .btn-tablet, .team, .r-help { display: none; }
+
+.group { display: block; width: calc(var(--wrap) * .86); max-width: 100%; height: auto; margin: 2.4rem auto 0; filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .16)); }
+
+@media (max-width: 1024px) {
+  .help { padding: 3.6rem 0 3.5rem; text-align: left; }
+  .help-body { display: contents; }
+
+  .help .col { position: relative; z-index: 1; width: 56%; min-width: 18rem; margin: 0 auto; }
+  .help h2 { margin-bottom: 2.5rem; }
+  .help .col p { display: block; margin-bottom: 2.6rem; }
+  .help .col:last-child { text-align: center; }
+  .help .col:last-child p { margin-bottom: 2.8rem; text-align: left; }
+  .help .btn { box-shadow: 0 4px 10px rgba(0, 0, 0, .12); }
+  .help .btn-desktop { display: none; }
+  .help .btn-tablet { display: inline-block; }
+
+  .group { display: none; }
+  .team { position: relative; z-index: 1; display: block; width: 100%; height: auto; margin: .5rem 0 2.6rem; }
+  .r-help { --s: 260px; --b: 22px; --c: #f6f6f6; top: 30px; right: -70px; display: block; }
+}
+
+@media (max-width: 560px) {
+  .help { padding-top: 3rem; }
+  .help .col { width: 78%; min-width: 0; }
+  .r-help { --s: 190px; --b: 18px; top: 20px; right: -60px; }
+}
